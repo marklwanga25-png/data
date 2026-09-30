@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Data Analytics Dashboard</title>
+    <!-- Include Plotly.js CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white py-6 shadow-md">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold">Salon Customer Analytics Dashboard</h1>
+            <p class="text-indigo-200 mt-1">Interactive operational performance & customer feedback report</p>
+        </div>
+    </header>
 
+    <!-- Main Container -->
+    <main class="container mx-auto px-6 py-8">
+        
+        <!-- KPI Summary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                <p class="text-sm font-medium text-gray-500">Total Customers Sampled</p>
+                <p class="text-3xl font-bold text-indigo-600 mt-2">12</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                <p class="text-sm font-medium text-gray-500">Avg Waiting Time</p>
+                <p class="text-3xl font-bold text-amber-600 mt-2">51.25 mins</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                <p class="text-sm font-medium text-gray-500">Avg Satisfaction Score</p>
+                <p class="text-3xl font-bold text-red-500 mt-2">2.25 / 5</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                <p class="text-sm font-medium text-gray-500">Target Wait Time</p>
+                <p class="text-3xl font-bold text-green-600 mt-2">&lt; 20 mins</p>
+            </div>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                {{div1 | safe}}
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                {{div2 | safe}}
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                {{div3 | safe}}
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+                {{div4 | safe}}
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-4 mt-12 text-center text-sm text-gray-500">
+        Generated for Salon Operational Review | Powered by Python & Plotly
+    </footer>
+
+</body>
+</html>
